@@ -13,14 +13,13 @@ let key9 = document.getElementById('key9')
 
 let resultado = document.getElementById('resultado')
 let n1 = 0
-let digito = ''
 let click = 0
 let operador = ''
 
 
 function montardsp(x) {
-    digito = x.value
-    resultado.innerText = resultado + digito
+    digito = x
+    res.innerHTML = res + digito
 }
 
 function reset() {
