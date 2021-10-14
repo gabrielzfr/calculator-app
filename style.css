@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+    --bgcolor: #3a4764;
+    --keyscolor: #232c43;
+    --dspcolor: #182034;
+
+    --normalkey: #eae3dc;
+    --normalkeyshadow: #b4a597;
+
+    --specialkey:#637097;
+    --specialkeyshadow:#404e72;
+
+    --igualkey: #d03f2f;
+    --igualkeyshadow: #93261a;
+    
+}
+
+
+
+body {
+    background-color: var(--bgcolor);
+    color: white;
+    
+    font-family: 'Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display {
+    background-color: var(--dspcolor);
+    width: 500px;
+    height: 100px;
+
+    margin-bottom: 20px;
+
+    border: 16px solid var(--dspcolor);
+    border-radius: 4%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.display > p {
+    font-size: 3rem;
+}
+.keys {
+    background-color: var(--keyscolor);
+    display: grid;
+    width: 500px;
+    height: 450px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+
+    border: 17px solid var(--keyscolor);
+    border-radius: 2%;
+    
+    
+}
+.keys > input{
+    height: 59px;
+    width: 100px;
+
+    background-color: var(--normalkey);
+    color: hsl(221, 14%, 31%);
+    
+    font-size: 2rem;
+    font-family: 'Spartan', sans-serif;
+    
+    border: 2px solid white;
+    border-radius: 10%;
+    
+    box-shadow: 0px 5px 1px 0px var(--normalkeyshadow);
+    
+}
+.keys > input#keyrst {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 90%;
+}
+
+.keys > input#keyigl {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    width: 90%;
+
+    font-size: 23px;
+    color: white;
+    background-color: var(--igualkey);
+    border-color: var(--igualkey);
+    box-shadow: 0px 5px 1px 0px var(--igualkeyshadow);
+}
+input:hover {
+    background-color: #d8cdc3;
+    border-color: #d8cdc3;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.keys > .st {
+    font-size: 1.2rem;
+
+    background-color: var(--specialkey);
+    border-color: var(--specialkey);
+    color: white;
+
+    box-shadow: 0px 5px 2px 0px var(--specialkeyshadow);
+}
+
