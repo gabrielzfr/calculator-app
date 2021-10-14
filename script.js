@@ -48,7 +48,13 @@ function igual() {
     } else if (operador == 3) {
         r = n1 * n2
     } else if (operador == 4) {
-        r = n1 / n2 
+        if (n2 == 0) {
+            alert('Impossivel dividir por zero')
+            reset()
+        } else {
+            r = n1 / n2  
+        }
+        
     } else {
         alert('Selecione um operador para o calculo')
     }
