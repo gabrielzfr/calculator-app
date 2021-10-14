@@ -9,16 +9,17 @@ function montardsp(x) {
     let digito = x
     res.innerText = res.innerText + digito
 }
-
+//#region operadores
 function reset() {
     n1 = 0
     n2 = 0
     res.innerText = ''
 }
 function adicao() {
-    n1 = parseInt(res.innerText)
+    n1 = parseFloat(res.innerText)
     res.innerText = ''
     operador = 1
+    console.log()
 } 
 
 function subtracao() {
@@ -40,7 +41,7 @@ function divisao() {
 }
 
 function igual() {
-    n2 = parseInt(res.innerText)
+    n2 = parseFloat(res.innerText)
     if (operador == 1) {
         r = n1 + n2
     } else if (operador == 2) {
@@ -60,4 +61,4 @@ function igual() {
     }
     res.innerText = r
 }
-
+//#endregion

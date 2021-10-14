@@ -11,7 +11,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; 
+    margin-top: 10px;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -21,10 +22,22 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/gabrielzfr" target="_blank">Gabriel Francis de Oliveira</a>.
     </div>
+    
+    
   </header>
- 
+  
+  <div class="themes">
+    <h1>calc</h1>
+  
+    <input type="range" list='tickmarks'name="" id="tema" >
+    <datalist id="tickmarks">
+      <option value="0">
+      <option value="50"> 
+      <option value="100">
+    </datalist>
 
-  <h1>calc</h1>
+  </div>
+
   <div class="display">
     <p id="res"></p>
   </div>
@@ -61,7 +74,7 @@
     <input type="button" value="-" onclick="subtracao()">
 
 
-    <input type="button" value=".">
+    <input type="button" value="." onclick="montardsp('.')">
     <input type="button" value="0" onclick="montardsp(0)">
     <input type="button" value="/" id="keydiv" onclick="divisao()">
     <input type="button" value="x" id="keymult" onclick="multiplicacao()">
@@ -74,5 +87,9 @@
   </div>
 
 </body>
+
+<footer>
+  <p>Todos os Direitos Reservados.</p>
+</footer>
 <script src="script.js"></script>
 </html>
