@@ -6,9 +6,13 @@
 }
 :root {
     --bgcolor: #3a4764;
+    --bgcolor2: #e6e6e6;
+    --bgcolor2: #160628;
+
     --keyscolor: #232c43;
     --dspcolor: #182034;
 
+    
     --normalkey: #eae3dc;
     --normalkeyshadow: #b4a597;
 
@@ -31,13 +35,63 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.themes {
+.top {
     width: 500px;
     display: flex;
     
     justify-content: space-between;
     margin: 40px 0px 15px 0px;
 }
+.themes {
+    display: flex;
+    align-items: center;
+}
+.themes p {
+    font-size: 0.7rem;
+    margin-right: 20px;
+
+}
+[type=checkbox] {
+    appearance: none;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.24);
+    width: 22px;
+    height: 22px;
+    background-color: #dae2df;
+    border-radius: 0;
+    
+}
+
+[type=checkbox]#t1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+[type=checkbox]#t1:checked::before,
+[type=checkbox]#t2:checked::before,
+[type=checkbox]#t3:checked::before {
+    content: '';
+    width: 13px;
+    height:13px;
+    background-color: var(--igualkey);
+    border-radius: 50px;
+    position: absolute;
+    margin: 4px;
+    
+}
+
+[type=checkbox]#t1,
+[type=checkbox]#t2,
+[type=checkbox]#t3 {
+    background-color: var(--keyscolor);
+}
+
+
+[type=checkbox]#t3 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 input#tema {
     width: 50px;
 
@@ -64,7 +118,7 @@ input#tema {
 .keys {
     background-color: var(--keyscolor);
     display: grid;
-    width: 500px;
+    min-width: 500px;
     height: 450px;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;

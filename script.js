@@ -5,9 +5,17 @@ let n2 = 0
 let r = 0
 let operador = 0;
 
+let t1 = document.getElementById('t1')
+let t2 = document.getElementById('t2')
+let t3 = document.getElementById('t3')
+
 function montardsp(x) {
     let digito = x
     res.innerText = res.innerText + digito
+}
+function apagar() {
+    res.innerText = res.innerText.substring(0, res.innerText.length - 1)
+    
 }
 //#region operadores
 function reset() {
@@ -62,3 +70,25 @@ function igual() {
     res.innerText = r
 }
 //#endregion
+
+
+function theme(x) {
+    if (x == 1) {
+        t1.checked = true
+        t2.checked = false
+        t3.checked = false
+
+        document.body.style.backgroundColor = 'var(--bgcolor)'
+    } else if (x == 2) {
+        t1.checked = false
+        t2.checked = true
+        t3.checked = false
+
+        document.body.style.backgroundColor = 'var(--bgcolor3)'
+    } else if (x == 3) {
+        t1.checked = false
+        t2.checked = false
+        t3.checked = true
+        document.body.style.backgroundColor = 'var(--bgcolor2)'
+    }
+}

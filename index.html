@@ -23,25 +23,32 @@
         Coded by <a href="https://github.com/gabrielzfr" target="_blank">Gabriel Francis de Oliveira</a>.
     </div>
     
-    
   </header>
   
-  <div class="themes">
-    <h1>calc</h1>
-  
-    <input type="range" list='tickmarks'name="" id="tema" >
-    <datalist id="tickmarks">
-      <option value="0">
-      <option value="50"> 
-      <option value="100">
-    </datalist>
 
+  <div class="top">
+    <h1>calc</h1>
+
+    
+    <div class="themes">
+        <p>THEME</p>
+        
+       <input type="checkbox" id="t1" onclick='theme(1)' checked> 
+
+      <input type="checkbox" id="t2" onclick='theme(2)'> 
+
+      <input type="checkbox" id="t3" onclick='theme(3)'> 
+      
+    </div>
+    
   </div>
 
+  <!--Tela-->
   <div class="display">
     <p id="res"></p>
   </div>
   
+  <!--Teclas-->
   <div class="keys">
     <input type="button" value="7" onclick="montardsp(7)">
 
@@ -50,7 +57,7 @@
     <input type="button" value="9"
     onclick="montardsp(9)">
 
-    <input type="button" value="DEL" class="st">
+    <input type="button" value="DEL" class="st" onclick="apagar()">
 
 
     <input type="button" value="4"
