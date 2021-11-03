@@ -73,22 +73,27 @@ function igual() {
 
 
 function theme(x) {
+    let keys = document.getElementById('keys')
     if (x == 1) {
         t1.checked = true
         t2.checked = false
         t3.checked = false
 
-        document.body.style.backgroundColor = 'var(--bgcolor)'
+        document.body.setAttribute('data-theme', 'blue_theme')
+        
     } else if (x == 2) {
         t1.checked = false
         t2.checked = true
         t3.checked = false
-
-        document.body.style.backgroundColor = 'var(--bgcolor3)'
+        document.body.setAttribute('data-theme', 'light_theme')
+        
+        
     } else if (x == 3) {
         t1.checked = false
         t2.checked = false
         t3.checked = true
-        document.body.style.backgroundColor = 'var(--bgcolor2)'
+        document.body.setAttribute('data-theme', 'purple_theme')
+
     }
 }
+

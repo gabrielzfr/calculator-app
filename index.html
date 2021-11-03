@@ -16,7 +16,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body data-theme=blue_theme>
   <header>
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -32,12 +32,18 @@
     
     <div class="themes">
         <p>THEME</p>
+        <div class="toggle">
+          <label for="t1">1</label>
+          <label for="t2">2</label>
+          <label for="t3">3</label>
+
+          <input type="checkbox" id="t1" onclick='theme(1)' checked> 
+
+          <input type="checkbox" id="t2" onclick='theme(2)'> 
+
+          <input type="checkbox" id="t3" onclick='theme(3)'> 
+        </div>
         
-       <input type="checkbox" id="t1" onclick='theme(1)' checked> 
-
-      <input type="checkbox" id="t2" onclick='theme(2)'> 
-
-      <input type="checkbox" id="t3" onclick='theme(3)'> 
       
     </div>
     
@@ -49,7 +55,7 @@
   </div>
   
   <!--Teclas-->
-  <div class="keys">
+  <div class="keys" id="keys">
     <input type="button" value="7" onclick="montardsp(7)">
 
     <input type="button" value="8" onclick="montardsp(8)">

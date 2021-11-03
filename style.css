@@ -4,31 +4,66 @@
 * {
         margin: 0;
 }
-:root {
-    --bgcolor: #3a4764;
-    --bgcolor2: #e6e6e6;
-    --bgcolor2: #160628;
 
+body[data-theme=blue_theme] {
+    --textcolor: white;
+    --textkeycolor: #444b5a;
+    
+    --bgcolor: #3a4764;
     --keyscolor: #232c43;
     --dspcolor: #182034;
 
-    
-    --normalkey: #eae3dc;
-    --normalkeyshadow: #b4a597;
+    --normalkey: #eae3dc;--normalkeyshadow: #b4a597;
+    --normalkeyhover: #b8b8b8;
 
     --specialkey:#637097;
     --specialkeyshadow:#404e72;
 
     --igualkey: #d03f2f;
     --igualkeyshadow: #93261a;
-    
+    --igualtextcolor: white;
 }
 
+body[data-theme=light_theme] {
+    --textcolor: #35352c;
+
+    --bgcolor: #e6e6e6;
+    --keyscolor:#d1cccc;
+    --dspcolor: #ededed;
+
+    --normalkey: #e5e4e1;
+    --normalkeyshadow: #b4a597;
+
+    --specialkey:#377f86;
+    --specialkeyshadow:#1b5f65;
+
+    --igualkey: #ca5502;
+    --igualkeyshadow: #893901;
+    --igualtextcolor: white;
+}
+
+body[data-theme=purple_theme] {
+    --textcolor: #ffe53d;
+
+    --bgcolor: #160628;
+    --keyscolor: #1d0934;
+    --dspcolor: #1d0934;
+
+    --normalkey: #341c4f;
+    --normalkeyshadow: #871c9c;
+
+    --specialkey:#58077d;
+    --specialkeyshadow:#bc15f4;
+
+    --igualkey: #00e0d1;
+    --igualkeyshadow: #6cf9f2;
+    --igualtextcolor: #1b2428;
+}
 
 
 body {
     background-color: var(--bgcolor);
-    color: white;
+    color: var(--textcolor);
     
     font-family: 'Spartan', sans-serif;
     display: flex;
@@ -44,16 +79,25 @@ body {
 }
 .themes {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 .themes p {
     font-size: 0.7rem;
-    margin-right: 20px;
+    margin: 0px 20px 2px 0px;
 
+}
+.toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.toggle label {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
 }
 [type=checkbox] {
     appearance: none;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.24);
     width: 22px;
     height: 22px;
     background-color: #dae2df;
@@ -64,6 +108,7 @@ body {
 [type=checkbox]#t1 {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    background-color: var(--keyscolor);
     
 }
 
@@ -80,9 +125,7 @@ body {
     
 }
 
-[type=checkbox]#t1,
-[type=checkbox]#t2,
-[type=checkbox]#t3 {
+[type=checkbox]#t2 {
     background-color: var(--keyscolor);
 }
 
@@ -90,12 +133,9 @@ body {
 [type=checkbox]#t3 {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    background-color: var(--keyscolor);
 }
 
-input#tema {
-    width: 50px;
-
-}
 
 .display {
     background-color: var(--dspcolor);
@@ -134,12 +174,12 @@ input#tema {
     width: 100px;
 
     background-color: var(--normalkey);
-    color: hsl(221, 14%, 31%);
+    color: var(--textkeycolor);
     
     font-size: 2rem;
     font-family: 'Spartan', sans-serif;
-    
-    border: 2px solid white;
+    border: 0px;
+    border-color: var(--normalkey);
     border-radius: 10%;
     
     box-shadow: 0px 5px 1px 0px var(--normalkeyshadow);
@@ -158,7 +198,7 @@ input#tema {
     width: 90%;
 
     font-size: 23px;
-    color: white;
+    color: var(--igualtextcolor);
     background-color: var(--igualkey);
     border-color: var(--igualkey);
     box-shadow: 0px 5px 1px 0px var(--igualkeyshadow);
@@ -175,8 +215,8 @@ input#keyigl:hover {
 }
 
 input:hover {
-    background-color: #c8c0b7;
-    border-color: #c8c0b7;
+    background-color: var(--normalkeyhover);
+    border-color: var(--normalkeyhover);
     cursor: pointer;
     transition: 400ms;
 }
