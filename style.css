@@ -18,9 +18,11 @@ body[data-theme=blue_theme] {
 
     --specialkey:#637097;
     --specialkeyshadow:#404e72;
+    --specialkeyhover:#5c6684;
 
     --igualkey: #d03f2f;
     --igualkeyshadow: #93261a;
+    --igualkeyhover: #aa3a2e;
     --igualtextcolor: white;
 }
 
@@ -36,9 +38,11 @@ body[data-theme=light_theme] {
 
     --specialkey:#377f86;
     --specialkeyshadow:#1b5f65;
+    --specialkeyhover:#1c5e64;
 
     --igualkey: #ca5502;
     --igualkeyshadow: #893901;
+    --igualkeyhover: #ad4800;
     --igualtextcolor: white;
 }
 
@@ -54,9 +58,11 @@ body[data-theme=purple_theme] {
 
     --specialkey:#58077d;
     --specialkeyshadow:#bc15f4;
+    --specialkeyhover:#4a0968;
 
     --igualkey: #00e0d1;
     --igualkeyshadow: #6cf9f2;
+    --igualkeyhover: #03c2b5;
     --igualtextcolor: #1b2428;
 }
 
@@ -158,7 +164,7 @@ body {
 .keys {
     background-color: var(--keyscolor);
     display: grid;
-    min-width: 500px;
+    width: 500px;
     height: 450px;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -170,8 +176,8 @@ body {
     
 }
 .keys > input{
-    height: 59px;
-    width: 100px;
+    height: 61px;
+    width: 80%;
 
     background-color: var(--normalkey);
     color: var(--textkeycolor);
@@ -204,14 +210,12 @@ body {
     box-shadow: 0px 5px 1px 0px var(--igualkeyshadow);
 }
 input#keyigl:hover {
-    background-color: #ac3629;
-    border-color: #ac3629;
+    background-color: var(--igualkeyhover);
 
 }
 
 .keys > .st:hover {
-    background-color: #5a6892;
-    border-color: #5a6892;
+    background-color: var(--specialkeyhover);
 }
 
 input:hover {
