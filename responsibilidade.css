@@ -19,7 +19,13 @@
    }
 }
 @media (max-width: 415px){
-   .keys {
+   .display {
+        height: 65px;
+   }
+   .display > p {
+    font-size: 1.9rem;
+}
+    .keys {
         height: 350px;
    }
    .keys > input {
