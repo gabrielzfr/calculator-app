@@ -27,79 +27,77 @@
     
   </header>
   
+  <main> 
+      <div class="top">
+        <h1>calc</h1>
+  
+        <div class="themes">
+            <p>THEME</p>
 
-  <div class="top">
-    <h1>calc</h1>
-
+            <div class="toggle">
+              <label for="t1">1</label>
+              <label for="t2">2</label>
+              <label for="t3">3</label>
     
-    <div class="themes">
-        <p>THEME</p>
-        <div class="toggle">
-          <label for="t1">1</label>
-          <label for="t2">2</label>
-          <label for="t3">3</label>
-
-          <input type="checkbox" id="t1" onclick='theme(1)' checked> 
-
-          <input type="checkbox" id="t2" onclick='theme(2)'> 
-
-          <input type="checkbox" id="t3" onclick='theme(3)'> 
+              <input type="checkbox" id="t1" onclick='theme(1)' checked> 
+    
+              <input type="checkbox" id="t2" onclick='theme(2)'> 
+    
+              <input type="checkbox" id="t3" onclick='theme(3)'> 
+            </div>
+             
         </div>
         
-      
-    </div>
+      </div>
     
-  </div>
-
-  <!--Tela-->
-  <div class="display">
-    <p id="res"></p>
-  </div>
-  
-  <!--Teclas-->
-  <div class="keys" id="keys">
-    <input type="button" value="7" onclick="montardsp(7)">
-
-    <input type="button" value="8" onclick="montardsp(8)">
-
-    <input type="button" value="9"
-    onclick="montardsp(9)">
-
-    <input type="button" value="DEL" class="st" onclick="apagar()">
-
-
-    <input type="button" value="4"
-    onclick="montardsp(4)">
-
-    <input type="button" value="5"
-    onclick="montardsp(5)">
-
-    <input type="button" value="6"
-    onclick="montardsp(6)">
-
-    <input type="button" value="+" onclick="adicao()">
-
-
-    <input type="button" value="1" onclick="montardsp(1)">
-
-    <input type="button" value="2" onclick="montardsp(2)">
-
-    <input type="button" value="3" onclick="montardsp(3)">
-
-    <input type="button" value="-" onclick="subtracao()">
-
-
-    <input type="button" value="." onclick="montardsp('.')">
-    <input type="button" value="0" onclick="montardsp(0)">
-    <input type="button" value="/" id="keydiv" onclick="divisao()">
-    <input type="button" value="x" id="keymult" onclick="multiplicacao()">
-  
-
-    <input type="button" value="RESET" class="st" id="keyrst" onclick="reset()">
-    <input type="button" value="=" id="keyigl" onclick="igual()">
-  </div>
-  <div id="resultado">
-  </div>
+      <!--Tela-->
+      <div class="display">
+        <p id="res"></p>
+      </div>
+      
+      <!--Teclas-->
+      <div class="keys" id="keys">
+        <input type="button" value="7" onclick="montardsp(7)">
+    
+        <input type="button" value="8" onclick="montardsp(8)">
+    
+        <input type="button" value="9"
+        onclick="montardsp(9)">
+    
+        <input type="button" value="DEL" class="st" onclick="apagar()">
+    
+    
+        <input type="button" value="4"
+        onclick="montardsp(4)">
+    
+        <input type="button" value="5"
+        onclick="montardsp(5)">
+    
+        <input type="button" value="6"
+        onclick="montardsp(6)">
+    
+        <input type="button" value="+" onclick="adicao()">
+    
+    
+        <input type="button" value="1" onclick="montardsp(1)">
+    
+        <input type="button" value="2" onclick="montardsp(2)">
+    
+        <input type="button" value="3" onclick="montardsp(3)">
+    
+        <input type="button" value="-" onclick="subtracao()">
+    
+    
+        <input type="button" value="." onclick="montardsp('.')">
+        <input type="button" value="0" onclick="montardsp(0)">
+        <input type="button" value="/" id="keydiv" onclick="divisao()">
+        <input type="button" value="x" id="keymult" onclick="multiplicacao()">
+      
+    
+        <input type="button" value="RESET" class="st" id="keyrst" onclick="reset()">
+        <input type="button" value="=" id="keyigl" onclick="igual()">
+      </div>
+  </main>
 
 </body>
 <script src="script/script.js"></script>
